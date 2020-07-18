@@ -1,12 +1,25 @@
 #include <stdio.h>
 
-int main() {
 
-    long c;
+int main(void)
+{
+  int c, lastc;
 
-    while ((c = getchar()) != EOF)
+  lastc = '-';
+
+  while((c = getchar()) != EOF)
+  {
+    if(c == ' ')
     {
+      if(lastc != ' ')
         putchar(c);
     }
-    
+    else
+      putchar(c);
+    lastc=c;
+  }
+
+  printf("%d\n", lastc);
+
+  return 0;
 }
