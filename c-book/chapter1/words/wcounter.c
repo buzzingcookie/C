@@ -9,6 +9,7 @@ int main(void) {
     int lines, characters, words, state;
 
     state = OUT;
+    lines = characters = words = 0;
 
     while ((c = getchar()) != EOF)
     {
